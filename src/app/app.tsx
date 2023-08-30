@@ -1,12 +1,12 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.scss';
-
-import NxWelcome from './nx-welcome';
+import PokemonCard from './components/Pokemon-card';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="com.pokedex" />
+      <h1>Pokedex</h1>
+      <PokemonCard />
     </div>
   );
 }
