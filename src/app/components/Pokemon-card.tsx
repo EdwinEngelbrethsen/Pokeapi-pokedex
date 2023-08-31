@@ -3,13 +3,13 @@ import { useState } from 'react';
 
 export default function PokemonCard() {
   const api = new PokemonClient();
-  const [pokemon, setPokemon] = useState('pikachu');
+  const [pokemon, setPokemon] = useState('');
 
   const fetchPokemonByName = async (pokemon: string) => {
     try {
       await api.getPokemonByName(pokemon).then((data) => {
-        setPokemon(pokemon);
-        console.log(pokemon);
+        setPokemon(data.name);
+        console.log(data);
       });
     } catch (e) {
       console.log(e);
@@ -28,13 +28,13 @@ export default function PokemonCard() {
         type={pokemon}
       ></input>
 
-      {/* <button
+      <button
         onClick={(e) => {
           fetchPokemonByName(pokemon);
         }}
       >
         Search
-      </button> */}
+      </button>
     </div>
   );
 }
