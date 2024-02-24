@@ -10,6 +10,9 @@
   "private": true,
   "dependencies": {
     "@swc/helpers": "~0.5.6",
+    "axios": "^1.6.7",
+    "axios-cache-interceptor": "^1.5.1",
+    "pokenode-ts": "^1.20.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -42,7 +45,7 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "jsdom": "~24.0.0",
     "nx": "18.0.5",
-    "nx-cloud": "latest",
+    "nx-cloud": "^16.0.4",
     "prettier": "^3.2.5",
     "sass": "^1.71.1",
     "tailwindcss": "^3.4.1",
