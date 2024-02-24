@@ -5,6 +5,7 @@ import { PokemonClient } from 'pokenode-ts'
 
 export function App() {
     const client = new PokemonClient()
+    const [inputText, setInputText] = useState('')
     const [pokemon, setPokemon] = useState([
         {
             name: '',
@@ -12,7 +13,6 @@ export function App() {
             sprite: '',
         },
     ])
-    var inputText = ''
 
     function searchPokemon() {
         client.getPokemonByName(inputText.toLocaleLowerCase()).then((response) => {
@@ -26,8 +26,8 @@ export function App() {
         })
     }
 
-    function showPokemonList() {
-        client.listPokemons(0, 20).then((response) => {
+    async function showPokemonList() {
+        await client.listPokemons(0, 20).then((response) => {
             setPokemon(
                 response.results.map((pokemon, index) => {
                     return {
@@ -38,8 +38,14 @@ export function App() {
                 }),
             )
         })
+    }
 
-        return (
+    useEffect(() => {
+        showPokemonList()
+    }, [])
+
+    return (
+        <div>
             <div>
                 <ul>
                     {pokemon.map((poke) => (
@@ -53,15 +59,9 @@ export function App() {
                     ))}
                 </ul>
             </div>
-        )
-    }
-
-    return (
-        <div>
-            {showPokemonList()}
             <input
                 type="text"
-                onChange={(event) => (inputText = event.target.value)}
+                onChange={(e) => setInputText(e.target.value)}
             />
             {/* <button onClick={searchPokemon}>Search</button> */}
         </div>
