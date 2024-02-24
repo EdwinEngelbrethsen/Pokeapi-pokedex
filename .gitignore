@@ -38,3 +38,14 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+.nx/cache/lockfile.hash
+.nx/cache/file-map.json
+.nx/cache/nx_files.nxt
+.nx/cache/parsed-lock-file.json
+.nx/cache/project-graph.json
+.nx/cache/cloud/2402.08.4/index.js
+.nx/cache/cloud/verify.lock
+.nx/cache/cloud/2402.08.4/package.json
+.nx/cache/cloud/2402.08.4/lib/daemon/process-run-end.js
+.nx/cache/cloud/2402.08.4/lib/heartbeat/heartbeat-process.js
+.nx/cache/d/daemon.log
