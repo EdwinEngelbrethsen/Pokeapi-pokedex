@@ -23,6 +23,11 @@ export default defineConfig({
             plugins: [tailwindcss()],
         },
     },
+    resolve: {
+        alias: {
+            src: '/src',
+        },
+    },
 
     // Uncomment this if you are using workers.
     // worker: {
