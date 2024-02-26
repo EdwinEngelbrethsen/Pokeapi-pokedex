@@ -7,10 +7,7 @@
         {
             "files": ["*.ts", "*.tsx"],
             "extends": ["plugin:@nx/typescript"],
-            "rules": {
-                "@typescript-eslint/no-explicit-any": "warning",
-                "@typescript-eslint/no-unused-vars": "warning"
-            }
+            "rules": {}
         },
         {
             "files": ["*.js", "*.jsx"],

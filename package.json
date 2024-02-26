@@ -7,13 +7,6 @@
         "build": "nx build",
         "test": "nx test"
     },
-    "overrides": {
-        "@nx/eslint-plugin": {
-            "@typescript-eslint/eslint-plugin": "^6.4.0",
-            "@typescript-eslint/parser": "^6.4.0",
-            "eslint-config-prettier": "^9.0.0"
-        }
-    },
     "private": true,
     "dependencies": {
         "@emotion/react": "^11.11.3",
