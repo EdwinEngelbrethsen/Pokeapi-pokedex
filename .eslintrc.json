@@ -6,8 +6,19 @@
     "overrides": [
         {
             "files": ["*.ts", "*.tsx"],
+            "parserOptions": {
+                "project": [
+                    "tsconfig.*?.json",
+                    "e2e/tsconfig.*?.json",
+                    "packages/*/tsconfig.*?.json"
+                ]
+            },
             "extends": ["plugin:@nx/typescript"],
-            "rules": {}
+            "rules": {
+                "@typescript-eslint/await-thenable": "error",
+                "@typescript-eslint/ban-ts-comment": "error",
+                "@typescript-eslint/no-explicit-any": "error"
+            }
         },
         {
             "files": ["*.js", "*.jsx"],
